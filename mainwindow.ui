@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+    background: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #737373,
+        stop: 1 #262626
+    );
+}</string>
+   </property>
+   <widget class="QLabel" name="logoLabel">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>20</y>
+      <width>191</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background: qlineargradient(
+        x1: 0, y1: 0,
+        x2: 0, y2: 1,
+        stop: 0 #737373,
+        stop: 1 #262626
+    );
+}
+QLabel#logoLabel {
+    background-color: transparent;
+    border: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/Vlad/Downloads/logo (1).png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>160</y>
+      <width>681</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox#groupBox{
+    background-color: transparent;         /* повністю прозорий фон */
+    border: 2px solid #868686;             /* сірий бордер */
+    border-radius: 30px;                   /* округлення */
+    margin-top: 0px;                       /* якщо немає заголовка */
+}
+
+QGroupBox#groupBox {
+    color: transparent;                    /* приховуємо заголовок, якщо випадково є */
+    background: transparent;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLineEdit" name="inputnumber">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>20</y>
+       <width>331</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit#inputnumber {
+    background-color: transparent;         
+    border: 2px solid #868686;             
+    border-radius: 15px;
+	font-size: 30px;
+	text-align: center;
+	padding-left: 45px;
+	color: #828282; 
+	font-weight: bold;              
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>ENTER NUMBER</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="from">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>161</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    background-color: transparent;
+    border: 2px solid #868686;
+    border-radius: 15px;
+    padding: 15px;
+    color: white; 
+}
+QComboBox QAbstractItemView {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #3a3a3a;  /* колір випадаючого списку */
+    selection-background-color: #5a5a5a;  /* при наведенні/виборі */
+    border: none;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>---</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="to">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>110</y>
+       <width>161</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox {
+    background-color: transparent;
+    border: 2px solid #868686;
+    border-radius: 15px;
+    padding: 15px;
+    color: white; 
+}
+QComboBox QAbstractItemView {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #3a3a3a;  /* колір випадаючого списку */
+    selection-background-color: #5a5a5a;  /* при наведенні/виборі */
+    border: none;
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>---</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="fromlabel">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>90</y>
+       <width>49</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    font-size: 20px;
+    color: #828282;
+	background: transparent;
+}</string>
+     </property>
+     <property name="text">
+      <string>From</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="tolabel">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>90</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    font-size: 20px;
+    color: #828282;
+	background: transparent;
+}</string>
+     </property>
+     <property name="text">
+      <string>To</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SWAP">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>100</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 8px;
+    border: 2px solid #868686;
+    color: #828282;
+	padding-left:5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left; /* текст ліворуч, щоб картинка була перед ним */
+	background: transparent;
+}
+
+QPushButton::icon {
+    position: absolute;
+    left: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}</string>
+     </property>
+     <property name="text">
+      <string>SWAP</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/Vlad/Downloads/SWAP.png</normaloff>C:/Users/Vlad/Downloads/SWAP.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>35</width>
+       <height>35</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CONVERT">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>150</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 8px;
+    border: 2px solid #868686;
+    color: #828282;
+    font-size: 20px;
+	padding-left:5px;
+    font-weight: bold;
+    text-align: left; /* текст ліворуч, щоб картинка була перед ним */
+	background: transparent;
+}
+
+QPushButton::icon {
+    position: absolute;
+    left: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}</string>
+     </property>
+     <property name="text">
+      <string>CONVERT</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/Vlad/Downloads/CONVERT.png</normaloff>C:/Users/Vlad/Downloads/CONVERT.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="RESET">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>200</y>
+       <width>141</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 8px;
+    border: 2px solid #868686;
+    color: #828282;
+    padding-left:5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left; /* текст ліворуч, щоб картинка була перед ним */
+	background: transparent;
+}
+
+QPushButton::icon {
+    position: absolute;
+    left: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}</string>
+     </property>
+     <property name="text">
+      <string>RESET</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/Vlad/Downloads/RESET.png</normaloff>C:/Users/Vlad/Downloads/RESET.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>35</width>
+       <height>35</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="result_line">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>300</y>
+       <width>561</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit#result_line{
+    background-color: transparent;         
+    border: 2px solid #868686;             
+    border-radius: 15px;
+	font-size: 15px;
+	padding-left: 15px;
+	paddint-right: 15px;
+	color: #828282; 
+	font-weight: regular;              
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="result_label">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>260</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    font-size: 35px;
+    color: #828282;
+	background: transparent;
+}</string>
+     </property>
+     <property name="text">
+      <string>RESULT</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="COPY">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>280</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 8px;
+    border: 2px solid #868686;
+    color: #828282;
+    font-size: 15px;
+	padding-left:5px;
+    font-weight: bold;
+    text-align: left; /* текст ліворуч, щоб картинка була перед ним */
+	background: transparent;
+}
+QPushButton#COPY {
+	background: none;
+	border-radius: 0px;
+    border: 0px solid #868686;
+	
+}
+
+QPushButton::icon {
+    position: absolute;
+    left: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}</string>
+     </property>
+     <property name="text">
+      <string>COPY</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/Vlad/Downloads/Group (1).png</normaloff>C:/Users/Vlad/Downloads/Group (1).png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="FILE_INPUT">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>0</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 8px;
+    border: 2px solid #868686;
+    color: #828282;
+    font-size: 15px;
+	padding-left:5px;
+    font-weight: bold;
+    text-align: left; /* текст ліворуч, щоб картинка була перед ним */
+	background: transparent;
+}
+QPushButton#FILE_INPUT {
+	background: none;
+	border-radius: 0px;
+    border: 0px solid #868686;
+	
+}
+
+QPushButton::icon {
+    position: absolute;
+    left: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}</string>
+     </property>
+     <property name="text">
+      <string>FILE</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/Vlad/Downloads/folder 1.png</normaloff>C:/Users/Vlad/Downloads/folder 1.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="FILE_SAVE">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>280</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 8px;
+    border: 2px solid #868686;
+    color: #828282;
+    font-size: 15px;
+	padding-left:5px;
+    font-weight: bold;
+    text-align: left; /* текст ліворуч, щоб картинка була перед ним */
+	background: transparent;
+}
+QPushButton#FILE_SAVE {
+	background: none;
+	border-radius: 0px;
+    border: 0px solid #868686;
+	
+}
+
+QPushButton::icon {
+    position: absolute;
+    left: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}</string>
+     </property>
+     <property name="text">
+      <string>SAVE</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/Vlad/Downloads/folder 1.png</normaloff>C:/Users/Vlad/Downloads/folder 1.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>15</width>
+       <height>15</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="instruction">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    border-radius: 8px;
+    border: 2px solid #868686;
+    color: #828282;
+    font-size: 15px;
+	padding-left:5px;
+    font-weight: bold;
+    text-align: left; /* текст ліворуч, щоб картинка була перед ним */
+	background: transparent;
+}
+QPushButton#instruction {
+	background: none;
+	border-radius: 0px;
+    border: 0px solid #868686;
+	
+}
+
+QPushButton::icon {
+    position: absolute;
+    left: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>C:/Users/Vlad/Downloads/information-pamphlet 1.png</normaloff>C:/Users/Vlad/Downloads/information-pamphlet 1.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
